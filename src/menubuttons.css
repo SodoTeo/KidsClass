@@ -1,0 +1,41 @@
+div {
+    position:fixed;
+    width:20%;
+    height:14%;
+  }
+  
+  #a1 {
+     top:17.5%;
+     left:10%;
+     font-size: 64px;
+  }
+  
+  #a2 {
+    top:17.5%;
+    left:40%;
+    font-size: 64px
+  }
+  
+  #a5 {
+    top:17.5%;
+    left:70%;
+    font-size: 64px
+  }
+  
+  #a3 {
+    top:65.5%;
+    left:10%;
+    font-size: 64px
+  }
+  
+  #a4 {
+    top:65.5%;
+    left:40%;
+    font-size: 64px
+  }
+  
+  #a6 {
+    top:65.5%;
+    left:70%;
+    font-size: 64px
+  }

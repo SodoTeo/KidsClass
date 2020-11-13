@@ -1,0 +1,27 @@
+
+body {
+  background-image: url('Util/background.jpg');
+  font-family: 'Chewy';
+  font-size: 22px;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
+
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border-radius: 8px;
+  color: #008CBA;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+
+.buttoncenter {
+  position: absolute;
+  top: 35%;
+  left: 33%;
+}
