@@ -1,41 +1,54 @@
-div {
+#a1 {
+    top:17.5%;
+    left:10%;
+    font-size: 64px;
     position:fixed;
     width:20%;
     height:14%;
   }
   
-  #a1 {
-     top:17.5%;
-     left:10%;
-     font-size: 64px;
-  }
-  
-  #a2 {
+#a2 {
     top:17.5%;
     left:40%;
-    font-size: 64px
+    font-size: 64px;
+    position:fixed;
+    width:20%;
+    height:14%;
   }
   
-  #a5 {
+#a5 {
     top:17.5%;
     left:70%;
-    font-size: 64px
+    font-size: 64px;
+    position:fixed;
+    width:20%;
+    height:14%;
   }
   
-  #a3 {
+#a3 {
     top:65.5%;
     left:10%;
-    font-size: 64px
+    font-size: 64px;
+    position:fixed;
+    width:20%;
+    height:14%;
   }
   
-  #a4 {
+#a4 {
     top:65.5%;
     left:40%;
-    font-size: 64px
+    font-size: 64px;
+    position:fixed;
+    width:20%;
+    height:14%;
   }
   
-  #a6 {
+#a6 {
     top:65.5%;
     left:70%;
-    font-size: 64px
+    font-size: 64px;
+    position:fixed;
+    width:20%;
+    height:14%;
   }
+  

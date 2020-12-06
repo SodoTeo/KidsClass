@@ -29,3 +29,28 @@ body {
   font-family: kidGreek;
   src: url('Util/kidmorphgreek.ttf');
 }
+
+#KidsClass{
+  color: #008CBA; 
+  text-align: center;
+}
+
+#kidsClassHours{
+  color: #008CBA; 
+  position: absolute; 
+  top: -5%; 
+  left: 38%;
+}
+
+#kidsClassTest{
+  color: #008CBA; 
+  position: absolute; 
+  top: 1%; 
+  left: 40%; 
+  font-family: 'Chewy';
+}
+
+#startButton{
+  padding: 61px 165px; 
+  font-size: 64px;
+}

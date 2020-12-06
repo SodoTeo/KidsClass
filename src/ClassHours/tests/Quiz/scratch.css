@@ -1,0 +1,50 @@
+#again{
+    position:fixed; 
+    width:20%; 
+    height:14%; 
+    font-family: 'kidGreek'; 
+    top:80%; 
+    left:40%; 
+    font-size: 40px;
+}
+#scratchDesc{
+    position:fixed; 
+    color: #53e619; 
+    width:20%; 
+    height:14%; 
+    font-family: 'kidGreek'; 
+    top:20%; 
+    left:4%; 
+    font-size: 21px;
+  }
+  
+#scratchFrame{
+    width:600px; 
+    height:600px;
+  }
+
+#kidsClassScratch{
+    color: #008CBA; 
+    position: absolute; 
+    top: -1%; 
+    left: 38%; 
+    font-family: 'Chewy';
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

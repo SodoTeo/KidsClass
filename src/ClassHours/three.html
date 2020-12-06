@@ -9,69 +9,69 @@
     <script src="start.js"></script>
   </head>
   <body>
-    <h1 style="color: #008CBA; position: absolute; top: -5%; left: 38%;">💖 KidsClass 💖</h1>
+    <h1 id="kidsClassHours">💖 KidsClass 💖</h1>
 
     <div class="slideshow-container">
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/1.gif" style="width:100%">
+        <img src="../Util/presentation3/1.gif">
       </div>
       
       <div class="mySlides fade">
-        <img src="../Util/presentation3/2.gif" style="width:100%">
+        <img src="../Util/presentation3/2.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/3.gif" style="width:100%">
+        <img src="../Util/presentation3/3.gif">
       </div>
       
       <div class="mySlides fade">
-        <img src="../Util/presentation3/4.gif" style="width:100%">
+        <img src="../Util/presentation3/4.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/5.gif" style="width:100%">
+        <img src="../Util/presentation3/5.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/6.gif" style="width:100%">
+        <img src="../Util/presentation3/6.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/7.gif" style="width:100%">
+        <img src="../Util/presentation3/7.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/8.gif" style="width:100%">
+        <img src="../Util/presentation3/8.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/9.gif" style="width:100%">
+        <img src="../Util/presentation3/9.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/10.gif" style="width:100%">
+        <img src="../Util/presentation3/10.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/11.gif" style="width:100%">
+        <img src="../Util/presentation3/11.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/12.gif" style="width:100%">
+        <img src="../Util/presentation3/12.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/13.gif" style="width:100%">
+        <img src="../Util/presentation3/13.gif">
       </div>
 
       <div class="mySlides fade">
-        <img src="../Util/presentation3/14.gif" style="width:100%">
+        <img src="../Util/presentation3/14.gif">
       </div>
 
       <a href="tests/Quiz/three/testOne.html">
         <div class="mySlides fade">
-          <img src="../Util/testg.gif" style="width:100%">
+          <img src="../Util/testg.gif">
         </div>
       </a>
       
@@ -82,32 +82,32 @@
       <br>
     
       <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
         }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          }
       </script>
   </body>
 </html>

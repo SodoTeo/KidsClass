@@ -2,10 +2,11 @@
 
 .mySlides {display: none}
 img {vertical-align: middle;}
+img {width:100%;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 1000px;
   position: absolute;
   top: 10%;
   left: 11%;

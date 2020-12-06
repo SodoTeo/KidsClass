@@ -3,6 +3,17 @@ body{
     font-family: monospace;
 }
 
+
+#again{
+    position:fixed; 
+    width:20%;
+    height:14%; 
+    font-family: 'kidGreek'; 
+    top:75%; 
+    left:40%; 
+    font-size: 40px;
+}
+
 #container{
     margin : 20px auto;
     background-color: white;
@@ -10,7 +21,9 @@ body{
     width : 700px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
-    position: relative;
+    position: absolute; 
+    top: 15%; 
+    left: 23%
 }
 #start{
     font-size: 1.5em;

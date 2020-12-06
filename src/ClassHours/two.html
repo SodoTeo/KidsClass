@@ -9,21 +9,21 @@
     <script src="start.js"></script>
   </head>
   <body>
-    <h1 style="color: #008CBA; position: absolute; top: -5%; left: 38%;">💖 KidsClass 💖</h1>
+    <h1 id="kidsClassHours">💖 KidsClass 💖</h1>
 
     <div class="slideshow-container">
 
       <div class="mySlides fade">
-        <img src="../Util/hourOne1.png" style="width:100%">
+        <img src="../Util/hourOne1.png">
       </div>
       
       <div class="mySlides fade">
-        <img src="../Util/hourOne.png" style="width:100%">
+        <img src="../Util/hourOne.png">
       </div>
       
       <a href="tests/Quiz/two/testOne.html">
         <div class="mySlides fade">
-          <img src="../Util/testg.gif" style="width:100%">
+          <img src="../Util/testg.gif">
         </div>
       </a>
       
@@ -59,7 +59,7 @@
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
-      }
+        }
       </script>
   </body>
 </html>
