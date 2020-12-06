@@ -5,7 +5,6 @@ const question = document.getElementById("question");
 const qImg = document.getElementById("qImg");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
-const choiceC = document.getElementById("C");
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
@@ -14,67 +13,58 @@ const scoreDiv = document.getElementById("scoreContainer");
 // create our questions
 let questions = [
     {
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/monitor.jpg",
-        choiceA : "Οθόνη",
-        choiceB : "Τηλεόραση",
-        choiceC : "Ποντίκι",
+        question : "Έχω πάντα καθαρά χέρια πριν πιάσω το ποντίκι και το πληκτρολόγιο",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
         correct : "A"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/keyboard.jpg",
-        choiceA : "Κουμπάκια",
-        choiceB : "Ηχεία",
-        choiceC : "Πληκτρολόγιο",
-        correct : "C"
+        question : "Μιλάω όταν μου πει η κυρία και αφού σηκώσω το χέρι μου",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
+        correct : "A"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/case.jpg",
-        choiceA : "Κουτάκι",
-        choiceB : "Κεντρική Μονάδα",
-        choiceC : "Εκτυπωτής",
+        question : "Tραβάω τα καλώδια μπροστά ή πίσω από τον υπολογιστή",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
         correct : "B"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/microphone.jpg",
-        choiceA : "Μικρόφωνο",
-        choiceB : "Ψηφιακή Κάμερα",
-        choiceC : "Ακουστικά",
+        question : "Δεν φέρνω ποτέ φαγητό ή νερό δίπλα στον υπολογιστή",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
         correct : "A"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/headphones.jpg",
-        choiceA : "Εκτυπωτής",
-        choiceB : "Ηχεία",
-        choiceC : "Ακουστικά",
-        correct : "C"
-    },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/mouse.jpg",
-        choiceA : "Οθόνη",
-        choiceB : "Ποντίκι",
-        choiceC : "Κεντρική Μονάδα",
+        question : "Δεν περπατώ ήρεμα όταν μπαίνω ή όταν βγαίνω από το εργαστήριο",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
         correct : "B"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/printer.jpg",
-        choiceA : "Εκτυπωτής",
-        choiceB : "Τετράγωνο",
-        choiceC : "Ποντίκι",
+        question : "Bάζω τα χέρια στη μύτη ή στο στόμα μου και μεταδίδω μικρόβια",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
+        correct : "B"
+    },{
+        question : "Πετάω τα σκουπίδια στο καλάθι",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
         correct : "A"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/speaker.jpg",
-        choiceA : "Μικρόφωνο",
-        choiceB : "Ψηφιακή Κάμερα",
-        choiceC : "Ηχεία",
-        correct : "C"
+        question : "Μιλάω σιγά και δεν ενοχλώ τον διπλανό μου ή την υπόλοιπη τάξη",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
+        correct : "A"
     },{
-        question : "Πώς ονομάζεται αυτή η συσκευή?",
-        imgSrc : "img/webcam.jpg",
-        choiceA : "Ψηφιακή Κάμερα",
-        choiceB : "Σταθερό",
-        choiceC : "Εικόνα",
+        question : "Βάζω την καρέκλα μου στη θέση της πριν φύγω",
+        imgSrc : "img/demo.jpg",
+        choiceA : "Σωστό",
+        choiceB : "Λάθος",
         correct : "A"
     }
 ];
@@ -98,7 +88,6 @@ function renderQuestion(){
     qImg.innerHTML = "<img src="+ q.imgSrc +">";
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
-    choiceC.innerHTML = q.choiceC;
 }
 
 start.addEventListener("click",startQuiz);
