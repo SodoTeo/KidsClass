@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="63.644279mm"
+   height="36.065742mm"
+   viewBox="0 0 63.644279 36.065743"
+   version="1.1"
+   id="svg978"
+   sodipodi:docname="pencil-on.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs972">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1700"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1694"
+       is_visible="true" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath982-1">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#57432f;stroke-opacity:1"
+         id="rect984-9"
+         width="71.517159"
+         height="142.09331"
+         x="93.630501"
+         y="84.574051"
+         clip-path="none" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath982-1-7">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#57432f;stroke-opacity:1"
+         id="rect984-9-5"
+         width="71.517159"
+         height="142.09331"
+         x="93.630501"
+         y="84.574051"
+         clip-path="none" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-150.08672"
+     inkscape:cy="-19.80307"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata975">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-4.463574,-131.01842)">
+    <rect
+       style="fill:#84af50;fill-opacity:1;stroke:#57432f;stroke-width:0.17486264;stroke-opacity:1"
+       id="rect69-1"
+       width="63.469418"
+       height="35.890881"
+       x="4.5510054"
+       y="131.10585"
+       ry="5.1582694" />
+    <path
+       style="fill:#ff0000;stroke:#c72100;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 22.504599,160.31353 29.265937,0.93209"
+       id="path1698"
+       inkscape:connector-curvature="0"
+       inkscape:path-effect="#path-effect1700"
+       inkscape:original-d="m 22.504599,160.31353 c 9.666487,0.31043 19.51089,0.62113 29.265937,0.93209"
+       transform="rotate(-2.4932651,87.09427,101.04564)" />
+    <g
+       transform="matrix(0.04985848,-0.00777662,0.00924917,0.04192059,20.387098,139.46059)"
+       id="g4"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 328.883,89.125 436.473,196.714 164.133,469.054 56.604,361.465 Z M 518.113,63.177 470.132,15.196 c -18.543,-18.543 -48.653,-18.543 -67.259,0 l -45.961,45.961 107.59,107.59 53.611,-53.611 c 14.382,-14.383 14.382,-37.577 0,-51.959 z M 0.3,512.69 c -1.958,8.812 5.998,16.708 14.811,14.565 L 135.002,498.186 27.473,390.597 Z"
+         id="path2"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

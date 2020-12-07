@@ -1,0 +1,84 @@
+<!doctype html>
+<!--
+Copyright (C) 2018 Alkis Georgopoulos <alkisg@gmail.com>.
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>KidsClass</title>
+  <style>
+    #back{
+      background-color: #4CAF50;
+      color: #008CBA;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      top:1.5%;
+      left:1.5%;
+      font-size: 20px;
+      position:fixed;
+      width:5%;
+      height:5%;
+      outline: none;
+      border-radius: 8px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="activity.css">
+  <script src="activity.js"></script>
+</head>
+<body>
+<div id="main">
+  <div id="encrypted">
+    <img id="e0" src="resource/l.svg" alt="">
+    <img id="e1" src="resource/l.svg" alt="">
+    <img id="e2" src="resource/l.svg" alt="">
+    <img id="e3" src="resource/l.svg" alt="">
+    <img id="e4" src="resource/l.svg" alt="">
+    <img id="e5" src="resource/l.svg" alt="">
+    <img id="e6" src="resource/l.svg" alt="">
+    <img id="e7" src="resource/l.svg" alt="">
+  </div>
+  <div id="decrypted">
+    <img id="d0" src="resource/l.svg" alt="">
+    <img id="d1" src="resource/l.svg" alt="">
+    <img id="d2" src="resource/l.svg" alt="">
+    <img id="d3" src="resource/l.svg" alt="">
+    <img id="d4" src="resource/l.svg" alt="">
+    <img id="d5" src="resource/l.svg" alt="">
+    <img id="d6" src="resource/l.svg" alt="">
+    <img id="d7" src="resource/l.svg" alt="">
+  </div>
+  <div id="stock">
+    <img id="s0" src="resource/l.svg" alt="">
+    <img id="s1" src="resource/l.svg" alt="">
+    <img id="s2" src="resource/l.svg" alt="">
+    <img id="s3" src="resource/l.svg" alt="">
+    <img id="s4" src="resource/l.svg" alt="">
+    <img id="s5" src="resource/l.svg" alt="">
+    <img id="s6" src="resource/l.svg" alt="">
+    <img id="s7" src="resource/l.svg" alt="">
+    <img id="s8" src="resource/l.svg" alt="">
+    <img id="s9" src="resource/l.svg" alt="">
+  </div>
+  <div id="menubar">
+    <img id="bar_home" src="resource/bar_home.svg" alt="Αρχική" title="Επιστροφή στην αρχική σελίδα">
+    <img id="bar_help" src="resource/bar_help.svg" alt="Βοήθεια" title="Βοήθεια">
+    <img id="bar_about" src="resource/bar_about.svg" alt="Περί" title="Περί">
+    <img id="bar_fullscreen" src="resource/bar_fullscreen.svg" alt="Πλήρης οθόνη" title="Πλήρης οθόνη">
+    <img id="bar_previous" src="resource/bar_previous.svg" alt="Προηγούμενο" title="Προηγούμενο επίπεδο">
+    <p id="level">1</p>
+    <img id="bar_next" src="resource/bar_next.svg" alt="Επόμενο" title="Επόμενο επίπεδο">
+  </div>
+</div>
+<img id="dragimg" src="resource/l0.svg" alt="">
+<div id="help"><div class="dialog">Από το κάτω κουτί επίλεξε το αρχικό γράμμα της κάθε εικόνας για να σχηματιστεί μια νέα λέξη.</div><audio id="helpaudio" src="resource/help.mp3"></audio></div>
+<button id="back" onclick="goBack()">Πίσω</button>
+
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+</body>
+</html>

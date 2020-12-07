@@ -1,10 +1,28 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu, MenuItem } = require('electron');
 const path = require('path');
+const { electron } = require('process');
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
 }
+
+const template = [
+  {
+    label: 'File',
+    submenu: [
+      {
+        role: 'quit'
+      }
+    ]
+  },
+  {
+    label: 'Documentation',
+    click () { require('electron').shell.openExternal('https://docs.google.com/document/d/1dlCs3krBzy_2zaPDpeFY6I3Vp_uQcBkMNyHTiMTijao/edit?usp=sharing')}
+  }
+]
+
 
 const createWindow = () => {
   // Create the browser window.
@@ -17,13 +35,16 @@ const createWindow = () => {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
+
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
+const menu = Menu.buildFromTemplate(template)
+Menu.setApplicationMenu(menu)
 app.on('ready', createWindow);
 
 // Quit when all windows are closed, except on macOS. There, it's common

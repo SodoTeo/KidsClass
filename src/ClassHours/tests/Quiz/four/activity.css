@@ -1,0 +1,188 @@
+/*
+Copyright (C) 2018 Alkis Georgopoulos <alkisg@gmail.com>.
+SPDX-License-Identifier: CC-BY-SA-4.0
+*/
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body {  /* flexbox needs this to center the main div */
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  font-size: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;  /* vertically center main div */
+  justify-content: center;  /* horizontally center main div */
+  overflow: hidden;  /* avoid scrollbars when dragging outside */
+}
+
+#main {
+  /* SVG backgrounds need preserveAspectRatio="none" in many browsers. */
+  background: rgb(245,214,86) url('resource/background.svg');
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 36em;
+  width: 64em;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 1.5em;  /* workaround to avoid space-evenly */
+  padding-bottom: 6.5em;  /* space for the menubar */
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+#encrypted {
+  display: flex;
+  background-color: rgba(240,192,192,0.5);
+  padding: 0 0.5em 0 0.5em;
+  border: 0.1em solid rgba(0,0,0,0.5);
+  border-radius: 1em;
+}
+
+#encrypted img {
+  width: 7em;
+  height: 7em;
+  padding: 0.5em;
+}
+
+#decrypted {
+  display: flex;
+  background-color: rgba(192,240,192,0.5);
+  padding: 0 0.5em 0 0.5em;
+  border: 0.1em solid rgba(0,0,0,0.5);
+  border-radius: 1em;
+}
+
+#decrypted img {
+  width: 7em;
+  height: 7em;
+  padding: 0.5em;
+}
+
+#stock {
+  display: flex;
+  background-color: rgba(192,192,240,0.5);
+  padding: 0 0.5em 0 0.5em;
+  border: 0.1em solid rgba(0,0,0,0.5);
+  border-radius: 1em;
+}
+
+#stock img {
+  width: 5.6em;
+  height: 5.6em;
+  padding: 0.5em;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+#stock img:hover {
+  -webkit-filter: brightness(120%) contrast(1.2);
+  filter: brightness(120%) contrast(1.2);
+  transform: scale(1.1);
+}
+
+#stock img:active {
+  opacity: 0.5;
+}
+
+@-webkit-keyframes menubar_animation {
+  from { left: -30em; }
+}
+
+@keyframes menubar_animation {
+  from { left: -30em; }
+}
+
+#menubar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(127,127,127,0.5);
+  position: absolute;
+  left: 0em;
+  bottom: 0.5em;
+  padding: 0 0.5em 0 0.5em;
+  border: 0.1em solid rgba(255,255,255,0.5);
+  border-radius: 0 1em 1em 0;
+  -webkit-animation: menubar_animation;
+  animation-name: menubar_animation;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+#menubar img {
+  width: 3.5em;
+  height: 3.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+#menubar img:hover {
+  -webkit-filter: brightness(120%) contrast(1.2);
+  filter: brightness(120%) contrast(1.2);
+  transform: scale(1.1);
+}
+
+#menubar img:active {
+  -webkit-filter: brightness(80%) contrast(1.2) !important;
+  filter: brightness(80%) contrast(1.2) !important;
+  transform: scale(1);
+}
+
+#menubar p {
+  display: inline;
+  font-size: 3em;
+  margin: 0;
+}
+
+#dragimg {
+  display: none;
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  opacity: 0.5;
+}
+
+#help {
+  display: none; /* javascript toggles that to flex */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(63,63,63,0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;  /* IE and old webview ignore "fixed" for flex childs */
+  left: 0;
+}
+
+#help .dialog {
+  text-align: center;
+  width: 19em;
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+  padding: 1em;
+  border: 0.2em solid rgb(80,80,80);
+  border-radius: 0.5em;
+  -webkit-filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
+  filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
+  font-size: 2em;
+}

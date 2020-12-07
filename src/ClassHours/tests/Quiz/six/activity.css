@@ -1,0 +1,417 @@
+/*
+Copyright (C) 2019 Dimitris Nikolos <dnikolos@gmail.com>
+SPDX-License-Identifier: CC-BY-SA-4.0
+*/
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  /*border-style: dotted;
+  border-width:1px;
+  border-color: red;*/
+}
+
+html, body {  /* flexbox needs this to center the main div */
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  margin: 0;
+  display: flex;
+  align-items: center;  /* vertically center main div */
+  justify-content: center;  /* horizontally center main div */
+  overflow: hidden;  /* avoid scrollbars when dragging outside */
+}
+
+#main {
+  /* SVG backgrounds need preserveAspectRatio="none" in many browsers. */
+  background-color: #50af7b;/* url('resource/background.svg');*/
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 36em;
+  width: 64em;
+  align-self:center;
+  overflow: hidden;
+  padding-top: 0.5em;  /* workaround to avoid space-evenly */
+  padding-bottom: 7em;  /* space for the menubar */
+  display: block;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  overflow:hidden;
+  margin:auto;
+}
+
+.index{
+  width:1.5em;
+  display:inline-block;
+  color:black;
+}
+#sel {
+  height:2.5em;
+  margin-top:0.5em;
+  font-size:0.9em;
+  width:8em;
+}
+#selchar {
+  height:2em;
+  font-size:0.9em;
+}
+
+#mats{
+  display:block;
+  text-align:left;
+  height:3.6em;
+  width:8em;
+  margin-bottom: 1em;
+  color:black;
+  font-size:0.9em;
+}
+#chars{
+  display:block;
+  text-align:left;
+  height:4em;
+  width:8em;
+  margin-bottom: 1em;
+  color:black;
+  font-size:0.9em;
+}
+#ui{
+
+  background-color: #af7b50;
+  display:inline-block;
+  float:left;
+  overflow: auto;
+  width:9em;
+  padding-top:2em;
+  padding-right:0.55em;
+  padding-left:0.55em;
+  height:30em;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+  text-align:center;
+  margin-left:0.3em;
+  /*border: 0.2em solid red;*/
+  border-radius : 1em;
+  -moz-box-shadow:    -0.1em 0.1em 0.1em #333;
+  -webkit-box-shadow: -0.1em 0.1em 0.1em 0.1em #333;
+  box-shadow:         -0.1em 0.1em 0.1em 0.1em #333;
+}
+#bottom{
+  display:inline-block;
+  float:left;
+  overflow: auto;
+  width:8em;
+}
+#cforward{
+  height:4em;
+  cursor:pointer;  
+}
+#cleft{
+  width:3.8em;
+  cursor:pointer;  
+}
+#cright{
+  width:3.8em;
+  cursor:pointer;  
+}
+#cbackward{
+	height:4em;
+  cursor:pointer;  
+}
+#buttons{  
+background-color: rgba(255,255,255,0.5);
+width:7.9em;
+}
+#buttons div img:hover {
+  transform: scale(1.1);
+}
+#up{
+  display:inline-block;
+  float:left;
+  overflow: auto;
+  margin-left:auto;
+  width:100%;
+}
+#middle{
+  display:inline-block;
+  float:left;
+  overflow: hidden;
+}
+#down{
+  display:inline-block;
+  float:left;
+  overflow: auto;
+  margin-left:auto;
+  width:100%;
+
+}
+
+#newmazediv{
+  display:block;
+  width:35em;
+  margin-left:34em;
+}
+
+#newmazediv img{
+  margin-top:1em;
+  width: 20%;
+  cursor:pointer;
+  padding-left:1em;
+}
+
+
+#cgo{
+  margin-top:1em;
+  width:40%;
+  cursor:pointer;
+}
+
+#cpause{
+	margin-top:1em;
+	width:40%;
+	cursor:pointer;
+}
+#cstop{
+  width:40%;
+  margin-top:1em;
+  cursor:pointer;  
+}
+#cdelete{
+  width:40%;
+  margin-top:1em;
+  cursor:pointer;  
+}
+
+#cdelete1{
+  width:40%;
+  margin-top:1em;
+  cursor:pointer;  
+}
+#cpencil{
+  width:40%;
+  margin-top:1em;
+  cursor:pointer;  
+}
+
+#program{
+  background-color:#7b50af;
+  display:inline-block;
+  height: 32em;
+  width: 10em;
+  display:inline-block;
+  margin-left:0.5em;
+  margin-right:0.5em;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  height:30em;
+  vertical-align: top;
+  border-radius: 0.5em;
+  -moz-box-shadow:    -0.1em 0.1em 0.1em #333;
+  -webkit-box-shadow: -0.1em 0.1em 0.1em 0.1em #333;
+  box-shadow:         -0.1em 0.1em 0.1em 0.1em #333;
+}
+
+#programButtons{
+  display:inline-block;
+  height: 24em;
+  width: 100%;
+}
+
+.progButtons{
+	cursor:pointer;
+}
+.progButtons:hover {
+  transform: scale(1.1);
+}
+
+.bcmd:hover{
+  transform: scale(1.1);
+}
+
+
+.cell{
+  display: inline-block;
+  margin-left:0.05em;
+  margin-top:0.1em;
+  height: 2.85em;
+  width: 3em;
+  text-align: center;
+  cursor:pointer;
+  vertical-align: middle;
+}
+
+
+.cell img{
+  margin-left: -0.1em;
+  height: 100%;
+  max-width:80%;
+  vertical-align: middle;
+  filter: hue-rotate(200deg) brightness(200%);
+}
+
+.cellHighlight{
+  /*filter: brightness(220%);*/
+  border: 2px solid yellow;
+  border-radius: 3px;
+  transform: scale(1.1);
+}
+#stage{
+  position: absolute;
+  display:inline-block;
+  margin-bottom: 1.5em;
+  margin-right:0.5em;
+  height: 30em;
+  width:43em;
+}
+#mycanvas{
+  position:absolute;
+  display:inline-block;
+  margin-bottom: 1.5em;
+  margin-right:0.5em;
+  height: 30.1em;
+  width:43.5em;
+  z-index: 100;
+}
+#grid{
+	width:100%;
+	height:100%;
+  text-align:left;
+}
+#eprobot{
+	position:absolute;
+	width:6em;
+	height:6em;
+	margin-left:0em;
+	margin-top:0em;
+	z-index: 200;
+}
+
+#exit{
+  position:absolute;
+  width:6em;
+  height:6em;
+  margin-left:0em;
+  margin-top:0em;
+  z-index: 199;
+}
+
+
+@-webkit-keyframes menubar_animation {
+  from { left: -30em; }
+}
+
+@keyframes menubar_animation {
+  from { left: -30em; }
+}
+
+#menubar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(127,127,127,0.5);
+  position: absolute;
+  left: 0em;
+  bottom: 0.1em;
+  padding: 0 0.5em 0 0.5em;
+  border: 0.1em solid rgba(255,255,255,0.5);
+  border-radius: 0 1em 1em 0;
+  -webkit-animation: menubar_animation;
+  animation-name: menubar_animation;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+#menubar img {
+  width: 3.5em;
+  height: 3em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+#menubar img:hover {
+  -webkit-filter: brightness(120%) contrast(1.2);
+  filter: brightness(120%) contrast(1.2);
+  transform: scale(1.1);
+}
+
+#menubar img:active {
+  -webkit-filter: brightness(80%) contrast(1.2) !important;
+  filter: brightness(80%) contrast(1.2) !important;
+  transform: scale(1);
+}
+
+#menubar p {
+  display: inline;
+  font-size: 3em;
+  margin: 0;
+}
+
+#help {
+  display: none; /* javascript toggles that to flex */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(63,63,63,0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;  /* IE and old webview ignore "fixed" for flex childs */
+  left: 0;
+  z-index:999;
+}
+
+#loading {
+  display: block; /* javascript toggles that to none */
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(63,63,63,0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;  /* IE and old webview ignore "fixed" for flex childs */
+  left: 0;
+  z-index:999;
+}
+
+
+#help .dialog {
+  position: absolute;
+  text-align: center;
+  width: 19em;
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+  padding: 1em;
+  border: 0.2em solid rgb(80,80,80);
+  border-radius: 0.5em;
+  -webkit-filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
+  filter: drop-shadow(0.5em 0.5em 0.5em rgb(80,80,80));
+  font-size: 2em;
+  z-index: 1000;
+}
+
+
+@keyframes success {
+     0%   {transform: scale(4.0);
+           margin-top: 12em;
+           margin-left: 18em;
+           z-index: 100;}
+     100% {transform: scale(5.0);
+           margin-top: 12em;
+           margin-left: 18em;
+           z-index:100;}
+}
+
+@keyframes reset {
+     0%   {transform: rotateY(0deg);}
+   100% {transform: rotateY(0deg);}  
+}

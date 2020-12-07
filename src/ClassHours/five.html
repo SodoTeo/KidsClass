@@ -14,16 +14,32 @@
     <div class="slideshow-container">
 
       <div class="mySlides fade">
-        <img src="../Util/hourOne1.png">
+        <img src="../Util/presentation5/intro.gif">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../Util/presentation5/1.jpg">
       </div>
       
       <div class="mySlides fade">
-        <img src="../Util/hourOne.png">
+        <img src="../Util/presentation5/2.jpg">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../Util/presentation5/3.jpg">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../Util/presentation5/5.jpg">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../Util/presentation5/6.jpg">
       </div>
       
-      <a href="tests/Quiz/one/testOne.html">
+      <a href="tests/Quiz/six/game.html">
         <div class="mySlides fade">
-          <img src="../Util/testg.gif">
+          <img src="../Util/presentation5/4.gif">
         </div>
       </a>
       
@@ -60,6 +76,14 @@
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
         }
+      </script>
+
+      <button id="back" onclick="goBack()">Πίσω</button>
+
+      <script>
+      function goBack() {
+        window.history.back();
+      }
       </script>
   </body>
 </html>

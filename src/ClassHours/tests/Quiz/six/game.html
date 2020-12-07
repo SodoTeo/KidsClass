@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KidsClass</title>
+  <style>
+    #back{
+      background-color: #4CAF50;
+      color: #008CBA;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      top:1.5%;
+      left:1.5%;
+      font-size: 20px;
+      position:fixed;
+      width:5%;
+      height:5%;
+      outline: none;
+      border-radius: 8px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="activity.css">
+  <script src="maze1.js"></script>
+  <script src="activity.js"></script>
+  <script>
+    maze = true;
+    levels = true;
+    DIR = UP;
+  </script>
+</head>
+<body>
+<div id="loading">
+	Παρακαλώ περιμένετε
+</div>
+<div id="main" style="display:none">
+  <div id = "ui">
+  <div id="buttons">
+  	<div id = "up">
+  		<img id="cforward" src="resource/beebot-fd.svg" title="Μπροστά" alt="Μπροστά" />
+  	</div>
+  	<div id = "middle">
+  		<img id="cleft" src="resource/beebot-lt.svg" title="Αριστερά" alt="Αριστερά" />
+  		<img id="cright" src="resource/beebot-rt.svg" title="Δεξιά" alt="Δεξιά" />
+  	</div>
+  	<div id = "down">
+		<img id="cbackward" src="resource/beebot-bk.svg" title="Πίσω" alt="Πίσω" />
+    </div>
+  </div>
+    <div id="programButtons">
+      <img class="progButtons" id="cgo" src="resource/beebot-go.svg" title="Εκτέλεση" alt="Εκτέλεση"/>
+      <img class="progButtons" id="cpause" src="resource/beebot-pa.svg" title="Παύση" alt="Παύση"/>
+      <img class="progButtons" id="cstop" src="resource/beebot-st.svg" title="Στοπ" alt="Στοπ"/>
+      <br/>
+      <img class="progButtons" id="cdelete1" src="resource/beebot-de1.svg" title="Διαγραφή επιλεγμένης εντολής" alt="Διαγραφή επιλεγμένης εντολής">
+      <img class="progButtons" id="cdelete" src="resource/beebot-de.svg" title="Διαγραφή εντολών" alt="Διαγραφή εντολών"/>
+      <img class="progButtons" id="cpencil" src="resource/pencil-off.svg" title="Ίχνος" alt="Ίχνος"/>
+      
+      
+    </div>
+  </div>
+  <div id="program">
+      <!--bottom to top vertical programming-->
+      <div class="cell" id="cell9">
+        <img id="cell9fd" src="resource/beebot-fd.svg"/>
+        <img id="cell9rt" src="resource/beebot-rt.svg"/>
+        <img id="cell9bk" src="resource/beebot-bk.svg"/>
+        <img id="cell9lt" src="resource/beebot-lt.svg"/>      
+      </div>
+      <div class="cell" id="cell19">
+        <img id="cell19fd" src="resource/beebot-fd.svg"/>
+        <img id="cell19rt" src="resource/beebot-rt.svg"/>
+        <img id="cell19bk" src="resource/beebot-bk.svg"/>
+        <img id="cell19lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell29">
+        <img id="cell29fd" src="resource/beebot-fd.svg"/>
+        <img id="cell29rt" src="resource/beebot-rt.svg"/>
+        <img id="cell29bk" src="resource/beebot-bk.svg"/>
+        <img id="cell29lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell8">
+        <img id="cell8fd" src="resource/beebot-fd.svg"/>
+        <img id="cell8rt" src="resource/beebot-rt.svg"/>
+        <img id="cell8bk" src="resource/beebot-bk.svg"/>
+        <img id="cell8lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell18">
+        <img id="cell18fd" src="resource/beebot-fd.svg"/>
+        <img id="cell18rt" src="resource/beebot-rt.svg"/>
+        <img id="cell18bk" src="resource/beebot-bk.svg"/>
+        <img id="cell18lt" src="resource/beebot-lt.svg"/>        
+      </div>
+      <div class="cell" id="cell28">
+        <img id="cell28fd" src="resource/beebot-fd.svg"/>
+        <img id="cell28rt" src="resource/beebot-rt.svg"/>
+        <img id="cell28bk" src="resource/beebot-bk.svg"/>
+        <img id="cell28lt" src="resource/beebot-lt.svg"/>        
+      </div>      
+      <div class="cell" id="cell7">
+        <img id="cell7fd" src="resource/beebot-fd.svg"/>
+        <img id="cell7rt" src="resource/beebot-rt.svg"/>
+        <img id="cell7bk" src="resource/beebot-bk.svg"/>
+        <img id="cell7lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell17">
+        <img id="cell17fd" src="resource/beebot-fd.svg"/>
+        <img id="cell17rt" src="resource/beebot-rt.svg"/>
+        <img id="cell17bk" src="resource/beebot-bk.svg"/>
+        <img id="cell17lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell27">
+        <img id="cell27fd" src="resource/beebot-fd.svg"/>
+        <img id="cell27rt" src="resource/beebot-rt.svg"/>
+        <img id="cell27bk" src="resource/beebot-bk.svg"/>
+        <img id="cell27lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell6">
+        <img id="cell6fd" src="resource/beebot-fd.svg"/>
+        <img id="cell6rt" src="resource/beebot-rt.svg"/>
+        <img id="cell6bk" src="resource/beebot-bk.svg"/>
+        <img id="cell6lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell16">
+        <img id="cell16fd" src="resource/beebot-fd.svg"/>
+        <img id="cell16rt" src="resource/beebot-rt.svg"/>
+        <img id="cell16bk" src="resource/beebot-bk.svg"/>
+        <img id="cell16lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell26">
+        <img id="cell26fd" src="resource/beebot-fd.svg"/>
+        <img id="cell26rt" src="resource/beebot-rt.svg"/>
+        <img id="cell26bk" src="resource/beebot-bk.svg"/>
+        <img id="cell26lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell5">
+        <img id="cell5fd" src="resource/beebot-fd.svg"/>
+        <img id="cell5rt" src="resource/beebot-rt.svg"/>
+        <img id="cell5bk" src="resource/beebot-bk.svg"/>
+        <img id="cell5lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell15">
+        <img id="cell15fd" src="resource/beebot-fd.svg"/>
+        <img id="cell15rt" src="resource/beebot-rt.svg"/>
+        <img id="cell15bk" src="resource/beebot-bk.svg"/>
+        <img id="cell15lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell25">
+        <img id="cell25fd" src="resource/beebot-fd.svg"/>
+        <img id="cell25rt" src="resource/beebot-rt.svg"/>
+        <img id="cell25bk" src="resource/beebot-bk.svg"/>
+        <img id="cell25lt" src="resource/beebot-lt.svg"/>
+      </div>            
+      <div class="cell" id="cell4">
+        <img id="cell4fd" src="resource/beebot-fd.svg"/>
+        <img id="cell4rt" src="resource/beebot-rt.svg"/>
+        <img id="cell4bk" src="resource/beebot-bk.svg"/>
+        <img id="cell4lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell14">
+        <img id="cell14fd" src="resource/beebot-fd.svg"/>
+        <img id="cell14rt" src="resource/beebot-rt.svg"/>
+        <img id="cell14bk" src="resource/beebot-bk.svg"/>
+        <img id="cell14lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell24">
+        <img id="cell24fd" src="resource/beebot-fd.svg"/>
+        <img id="cell24rt" src="resource/beebot-rt.svg"/>
+        <img id="cell24bk" src="resource/beebot-bk.svg"/>
+        <img id="cell24lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell3">
+        <img id="cell3fd" src="resource/beebot-fd.svg"/>
+        <img id="cell3rt" src="resource/beebot-rt.svg"/>
+        <img id="cell3bk" src="resource/beebot-bk.svg"/>
+        <img id="cell3lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell13">
+        <img id="cell13fd" src="resource/beebot-fd.svg"/>
+        <img id="cell13rt" src="resource/beebot-rt.svg"/>
+        <img id="cell13bk" src="resource/beebot-bk.svg"/>
+        <img id="cell13lt" src="resource/beebot-lt.svg"/>
+      </div> 
+      <div class="cell" id="cell23">
+        <img id="cell23fd" src="resource/beebot-fd.svg"/>
+        <img id="cell23rt" src="resource/beebot-rt.svg"/>
+        <img id="cell23bk" src="resource/beebot-bk.svg"/>
+        <img id="cell23lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell2">
+        <img id="cell2fd" src="resource/beebot-fd.svg"/>
+        <img id="cell2rt" src="resource/beebot-rt.svg"/>
+        <img id="cell2bk" src="resource/beebot-bk.svg"/>
+        <img id="cell2lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell12">
+        <img id="cell12fd" src="resource/beebot-fd.svg"/>
+        <img id="cell12rt" src="resource/beebot-rt.svg"/>
+        <img id="cell12bk" src="resource/beebot-bk.svg"/>
+        <img id="cell12lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell22">
+        <img id="cell22fd" src="resource/beebot-fd.svg"/>
+        <img id="cell22rt" src="resource/beebot-rt.svg"/>
+        <img id="cell22bk" src="resource/beebot-bk.svg"/>
+        <img id="cell22lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell1">
+        <img id="cell1fd" src="resource/beebot-fd.svg"/>
+        <img id="cell1rt" src="resource/beebot-rt.svg"/>
+        <img id="cell1bk" src="resource/beebot-bk.svg"/>
+        <img id="cell1lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell11">
+        <img id="cell11fd" src="resource/beebot-fd.svg"/>
+        <img id="cell11rt" src="resource/beebot-rt.svg"/>
+        <img id="cell11bk" src="resource/beebot-bk.svg"/>
+        <img id="cell11lt" src="resource/beebot-lt.svg"/>
+      </div>
+            <div class="cell" id="cell21">
+        <img id="cell21fd" src="resource/beebot-fd.svg"/>
+        <img id="cell21rt" src="resource/beebot-rt.svg"/>
+        <img id="cell21bk" src="resource/beebot-bk.svg"/>
+        <img id="cell21lt" src="resource/beebot-lt.svg"/>
+      </div>      
+      <div class="cell" id="cell0">
+        <img id="cell0fd" src="resource/beebot-fd.svg"/>
+        <img id="cell0rt" src="resource/beebot-rt.svg"/>
+        <img id="cell0bk" src="resource/beebot-bk.svg"/>
+        <img id="cell0lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell10">
+        <img id="cell10fd" src="resource/beebot-fd.svg"/>
+        <img id="cell10rt" src="resource/beebot-rt.svg"/>
+        <img id="cell10bk" src="resource/beebot-bk.svg"/>
+        <img id="cell10lt" src="resource/beebot-lt.svg"/>
+      </div>
+      <div class="cell" id="cell20">
+        <img id="cell20fd" src="resource/beebot-fd.svg"/>
+        <img id="cell20rt" src="resource/beebot-rt.svg"/>
+        <img id="cell20bk" src="resource/beebot-bk.svg"/>
+        <img id="cell20lt" src="resource/beebot-lt.svg"/>
+      </div>      
+  </div>
+  <canvas id="mycanvas">
+  </canvas>
+  <div id="stage">
+      <img id="eprobot" src="resource/ladybug.svg">
+      <img id="exit" src="resource/flower.svg">
+  </div>
+
+  <div id="menubar">
+    <img id="bar_home" src="resource/bar_home.svg" alt="Αρχική" title="Επιστροφή στην αρχική σελίδα" style="display:none">
+    <img id="bar_help" src="resource/bar_help.svg" alt="Βοήθεια" title="Βοήθεια">
+    <img id="bar_about" src="resource/bar_about.svg" alt="Περί" title="Περί">
+    <img id="bar_fullscreen" src="resource/bar_fullscreen.svg" alt="Πλήρης οθόνη" title="Πλήρης οθόνη" style="display:none">
+    <img id="bar_previous" src="resource/bar_previous.svg" alt="Προηγούμενο" title="Προηγούμενο επίπεδο"/>
+    <p id="level">1</p>
+    <img id="bar_next" src="resource/bar_next.svg" alt="Επόμενο" title="Επόμενο επίπεδο"/>
+
+  </div>
+  <div id=newmazediv>
+    <img class="progButtons" id="maze1" src="resource/maze1.svg" title="Λαβύρινθος 1" alt="Λαβύρινθος 1">
+    <img class="progButtons" id="maze2" src="resource/maze2.svg" title="Λαβύρινθος 2" alt="Λαβύρινθος 2">
+    <img class="progButtons" id="maze3" src="resource/maze3.svg" title="Λαβύρινθος 3" alt="Λαβύρινθος 3">
+    <img class="progButtons" id="maze0" src="resource/newmaz.svg" title="Τυχαίος λαβύρινθος" alt="Τυχαίος λαβύρινθος">
+  </div>
+   </div>
+<div id="help"><div class="dialog">Σχεδίασε το πρόγραμμα με τα μπλε βελάκια και εκτέλεσέ το με το πλήκτρο εκτέλεσης για να φτάσει η πασχαλίτσα στο λουλούδι.</div><audio id="audiohelp"><source src="resource/EPRobotMaze.mp3" type="audio/mp3"></audio>
+
+</div>
+<button id="back" onclick="goBack()">Πίσω</button>
+
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+
+
+
+</body>
+</html>

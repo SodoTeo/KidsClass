@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140" height="140" version="1.1" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(.88058 0 0 .87898 69.952 70.001)">
+  <g transform="matrix(1.5233 0 0 1.5224 374.2 -515.65)">
+   <path d="m-296.85 377.05q0 13 13 13h76.4q13 0 13-13v-76.65q0-13-13-13h-76.4q-13 0-13 13z" fill="#fff" fill-opacity=".87843"/>
+   <path d="m-283.81 287.39h76.4q13 0 13 13v76.65q0 13-13 13h-76.4q-13 0-13-13v-76.65q0-13 13-13z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.97"/>
+  </g>
+ </g>
+</svg>
