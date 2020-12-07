@@ -2,21 +2,42 @@
   "name": "kidsclass",
   "productName": "kidsclass",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "An interactive Greek application for 3rd grade primary school.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "KidsClass",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "logo.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "installerIcon": "logo.ico",
+      "uninstallerIcon": "logo.ico",
+      "uninstallDisplayName": "KidsClass",
+      "license": "license.md",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": {
     "name": "SodoTeo",
     "email": "sodolescuteodor@gmail.com"
   },
-  "license": "MIT",
+  "license": "GPL-3.0 License",
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -45,6 +66,7 @@
     }
   },
   "dependencies": {
+    "electron-builder": "^22.9.1",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
@@ -53,6 +75,9 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "electron": "10.1.5"
+    "electron": "10.1.5",
+    "electron-packager": "^15.2.0",
+    "electron-wix-msi": "^3.0.4"
+    
   }
 }
